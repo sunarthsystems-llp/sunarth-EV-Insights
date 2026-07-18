@@ -1,11 +1,403 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="SunArth Insights | Powering India's EV Knowledge">
+	<!-- Hero Section with Subtle Grid Pattern -->
+	<section class="hero">
+		<div class="hero-content">
+			<span class="badge">SUNARTH INSIGHTS</span>
+			<h1>Powering India's EV Knowledge</h1>
+			<p>Expert guides, industry insights, installation tutorials, and charging infrastructure resources engineered for the future.</p>
+
+			<div class="hero-buttons">
+				<a href="#articles" class="btn btn-primary">Explore Articles</a>
+				<a href="https://sunarth.com/hardware" class="btn btn-secondary">EV Solutions</a>
+			</div>
+		</div>
+	</section>
+
+	<main class="container">
+
+		<!-- Featured Article & Categories Layout -->
+		<div class="top-layout">
+			<!-- Featured Card -->
+		<a href="/blog/ev-charging-guide" class="featured-card">
+            <img src="/img1.svg" alt="Complete Guide to EV Charging" class="featured-image" />
+            <div class="featured-content">
+           <span class="category-tag">FEATURED</span>
+           <h2>The Complete Guide to EV Charging in India</h2>
+           <p class="read-time">8 min read</p>
+          </div>
+        </a>
+
+			<!-- Quick Categories -->
+			<div class="categories-grid">
+				<div class="category-card">⚡ Charging Guides</div>
+				<div class="category-card">🏢 Commercial EV</div>
+				<div class="category-card">🏠 Home Charging</div>
+				<div class="category-card">🚍 Fleet Solutions</div>
+				<div class="category-card">🔋 Battery Technology</div>
+				<div class="category-card">📈 Industry Insights</div>
+			</div>
+		</div>
+
+		<!-- Latest Articles Grid -->
+		<div class="articles-grid">
+				<!-- Card 1 -->
+				<a href="/blog/commercial-hubs" class="article-card" style="text-decoration: none;">
+					<div class="card-img bg-img-1"></div>
+					<div class="card-body">
+						<span class="tag">Installation</span>
+						<h4 style="color: var(--text-main);">Setting Up Commercial Hubs</h4>
+						<p>Best practices for deploying scalable EV infrastructure in retail spaces.</p>
+						<span class="read-more">Read →</span>
+					</div>
+				</a>
+
+				<!-- Card 2 -->
+				<a href="/blog/ac-vs-dc" class="article-card" style="text-decoration: none;">
+					<div class="card-img bg-img-2"></div>
+					<div class="card-body">
+						<span class="tag">Technology</span>
+						<h4 style="color: var(--text-main);">AC vs. DC Fast Charging</h4>
+						<p>Understanding the hardware requirements for rapid charging solutions.</p>
+						<span class="read-more">Read →</span>
+					</div>
+				</a>
+
+				<!-- Card 3 -->
+				<a href="/blog/grid-balancing" class="article-card" style="text-decoration: none;">
+					<div class="card-img bg-img-3"></div>
+					<div class="card-body">
+						<span class="tag">Sustainability</span>
+						<h4 style="color: var(--text-main);">Grid Balancing & Renewables</h4>
+						<p>How intelligent chargers prevent local grid overloading.</p>
+						<span class="read-more">Read →</span>
+					</div>
+				</a>
+			</div>
+
+		<!-- Newsletter Section -->
+		<section class="newsletter">
+			<div class="newsletter-content">
+				<h3>Stay updated with the EV Industry</h3>
+				<form class="subscribe-form">
+					<input type="email" placeholder="Enter your email address" required />
+					<button type="submit" class="btn btn-primary">Subscribe</button>
+				</form>
+			</div>
+		</section>
+	</main>
 </Layout>
+
+<style>
+	/* --- Hero Section & Grid Background --- */
+	.hero {
+		padding: 8rem 2rem 6rem;
+		text-align: center;
+		position: relative;
+		/* The Subtle Stripe/Notion style Grid */
+		background-image:
+			linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+			linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+		background-size: 40px 40px;
+		background-position: center top;
+	}
+
+	.hero::after {
+		content: '';
+		position: absolute;
+		bottom: 0; left: 0; right: 0; top: 0;
+		background: linear-gradient(to bottom, transparent, var(--bg-color));
+		pointer-events: none;
+	}
+
+	.hero-content {
+		max-width: 800px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 10;
+	}
+
+	.badge {
+		display: inline-block;
+		background: rgba(14, 122, 77, 0.1);
+		color: var(--primary);
+		padding: 0.4rem 1rem;
+		border-radius: 50px;
+		font-weight: 700;
+		font-size: 0.85rem;
+		letter-spacing: 1px;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero h1 {
+		font-size: 4rem;
+		font-weight: 800;
+		letter-spacing: -1.5px;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero p {
+		font-size: 1.25rem;
+		color: var(--text-light);
+		margin-bottom: 2.5rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* --- Buttons --- */
+	.hero-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.btn {
+		padding: 0.8rem 1.8rem;
+		border-radius: 8px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.2s ease;
+		font-size: 1rem;
+	}
+
+	.btn-primary {
+		background-color: var(--primary);
+		color: var(--white);
+		box-shadow: 0 4px 14px rgba(14, 122, 77, 0.2);
+	}
+
+	.btn-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(14, 122, 77, 0.3);
+	}
+
+	.btn-secondary {
+		background-color: var(--white);
+		color: var(--text-main);
+		border: 1px solid var(--border);
+	}
+
+	.btn-secondary:hover {
+		border-color: var(--text-light);
+		background-color: #f3f4f6;
+	}
+
+	/* --- Layout Container --- */
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	/* --- Featured & Categories Layout --- */
+	.top-layout {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 2rem;
+		margin-top: 2rem;
+		margin-bottom: 6rem;
+	}
+
+	.featured-card {
+		background: var(--white);
+		border-radius: 16px;
+		border: 1px solid var(--border);
+		overflow: hidden;
+		text-decoration: none;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.featured-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+	}
+
+	.featured-image {
+		height: 300px;
+		background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Placeholder for real image */
+	}
+
+	.featured-content {
+		padding: 2.5rem;
+	}
+
+	.category-tag {
+		font-family: 'Manrope', sans-serif;
+		font-weight: 800;
+		font-size: 0.8rem;
+		color: var(--accent);
+		letter-spacing: 1px;
+	}
+
+	.featured-content h2 {
+		font-size: 2.2rem;
+		margin: 1rem 0;
+	}
+
+	.read-time {
+		color: var(--text-light);
+		font-size: 0.95rem;
+	}
+
+	/* Categories Grid */
+	.categories-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.category-card {
+		background: var(--white);
+		border: 1px solid var(--border);
+		padding: 1.2rem;
+		border-radius: 12px;
+		font-weight: 600;
+		color: var(--text-main);
+		cursor: pointer;
+		transition: all 0.2s ease;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.category-card:hover {
+		border-color: var(--primary);
+		color: var(--primary);
+		transform: translateX(5px);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+	}
+
+	/* --- Latest Articles Grid --- */
+	.section-title {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid var(--border);
+		padding-bottom: 1rem;
+	}
+
+	.articles-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		margin-bottom: 6rem;
+	}
+
+	.article-card {
+		background: var(--white);
+		border-radius: 12px;
+		border: 1px solid var(--border);
+		overflow: hidden;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		cursor: pointer;
+	}
+
+	.article-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+	}
+
+	.card-img {
+		height: 200px;
+		background-color: #eee;
+	}
+	/* Placeholder gradients for images */
+	.bg-img-1 { background: linear-gradient(45deg, #f3e7e9, #e3eeff); }
+	.bg-img-2 { background: linear-gradient(45deg, #e0c3fc, #8ec5fc); }
+	.bg-img-3 { background: linear-gradient(45deg, #d4fc79, #96e6a1); }
+
+	.card-body {
+		padding: 1.5rem;
+	}
+
+	.tag {
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: var(--primary);
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.card-body h4 {
+		font-size: 1.25rem;
+		margin: 0.5rem 0 1rem;
+	}
+
+	.card-body p {
+		color: var(--text-light);
+		font-size: 0.95rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.read-more {
+		font-weight: 600;
+		color: var(--text-main);
+		font-size: 0.9rem;
+	}
+
+	.article-card:hover .read-more {
+		color: var(--primary);
+	}
+
+	/* --- Newsletter --- */
+	.newsletter {
+		background: var(--white);
+		border: 1px solid var(--border);
+		border-radius: 16px;
+		padding: 4rem 2rem;
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.newsletter h3 {
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+	}
+
+	.subscribe-form {
+		display: flex;
+		max-width: 500px;
+		margin: 0 auto;
+		gap: 0.5rem;
+	}
+
+	.subscribe-form input {
+		flex: 1;
+		padding: 0.8rem 1.2rem;
+		border: 1px solid var(--border);
+		border-radius: 8px;
+		font-family: inherit;
+		font-size: 1rem;
+		outline: none;
+		transition: border-color 0.2s;
+	}
+
+	.subscribe-form input:focus {
+		border-color: var(--primary);
+	}
+    .featured-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border);
+}
+	/* --- Responsive Design --- */
+	@media (max-width: 900px) {
+		.hero h1 { font-size: 3rem; }
+		.top-layout { grid-template-columns: 1fr; }
+		.articles-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+
+	@media (max-width: 600px) {
+		.hero h1 { font-size: 2.5rem; }
+		.hero-buttons { flex-direction: column; }
+		.articles-grid { grid-template-columns: 1fr; }
+		.subscribe-form { flex-direction: column; }
+	}
+</style>

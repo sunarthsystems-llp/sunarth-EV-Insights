@@ -1,23 +1,318 @@
-<!doctype html>
+---
+export interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+}
+
+const {
+	title,
+	description = "Expert guides, industry insights, and charging infrastructure resources engineered for the future by SunArth.",
+	image = "/img1.svg"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={image} />
+
+		<!-- Google Fonts: Manrope (Headings) & Inter (Body) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<nav class="navbar">
+			<div class="nav-content">
+				<div class="logo">SunArth Insights</div>
+				<div class="nav-links">
+					<a href="https://sunarth.com/hardware">Products</a>
+					<a href="https://sunarth.com/about">Company</a>
+				</div>
+			</div>
+		</nav>
+
 		<slot />
+
+		<footer class="footer">
+			<div class="footer-container">
+				<!-- Brand & App Column -->
+				<div class="footer-col brand-col">
+					<div class="footer-logo">SunArth</div>
+					<p class="company-desc">Leading the way in EV charging infrastructure across India. Reliable, scalable, and future-proof solutions for businesses and drivers.</p>
+
+					<div class="app-download">
+						<p class="app-title">Download Our App</p>
+						<div class="app-badges">
+							<img src="/applestore.png" alt="Download on the App Store" class="store-badge" onerror="this.style.display='none'" />
+							<img src="/android-appgoogle.png" alt="Get it on Google Play" class="store-badge" onerror="this.style.display='none'" />
+						</div>
+					</div>
+				</div>
+
+				<!-- Quick Links -->
+				<div class="footer-col">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="https://sunarth.com/about">About Us</a></li>
+						<li><a href="https://sunarth.com/hardware">AC Chargers</a></li>
+						<li><a href="https://sunarth.com/hardware">DC Fast Chargers</a></li>
+						<li><a href="https://sunarth.com/hardware">Charging Software (CPMS)</a></li>
+					</ul>
+				</div>
+
+				<!-- Support -->
+				<div class="footer-col">
+					<h4>Support</h4>
+					<ul>
+						<li><a href="https://sunarth.com/hardware">Find a Charger</a></li>
+						<li><a href="https://sunarth.com/privacy-policy">Privacy Policy</a></li>
+						<li><a href="https://sunarth.com/terms%26conditions">Terms and conditions</a></li>
+					</ul>
+				</div>
+
+				<!-- Contact Us -->
+				<div class="footer-col contact-col">
+					<h4>Contact Us</h4>
+					<ul>
+						<li>
+							<span class="contact-icon">📍</span>
+							<p>Cello Platina 202, F.C. Road,<br/>Pune 411005</p>
+						</li>
+						<li>
+							<span class="contact-icon">📞</span>
+							<p>+91-7797798887 / 81</p>
+						</li>
+						<li>
+							<span class="contact-icon">✉️</span>
+							<a href="mailto:info@sunarth.com">info@sunarth.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>&copy; 2026 SunArth Integrated EV Charging Solutions. All rights reserved.</p>
+			</div>
+		</footer>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<style is:global>
+	:root {
+		--primary: #0E7A4D;
+		--secondary: #2563EB;
+		--bg-color: #FAFAFA;
+		--text-main: #111827;
+		--text-light: #4B5563;
+		--accent: #7C3AED;
+		--white: #FFFFFF;
+		--border: #E5E7EB;
+	}
+
+	* {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: 'Inter', sans-serif;
+		background-color: var(--bg-color);
+		color: var(--text-main);
+		line-height: 1.6;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Manrope', sans-serif;
+		color: var(--text-main);
+		line-height: 1.2;
+	}
+
+	/* Elegant Navbar */
+	.navbar {
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid var(--border);
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+
+	.nav-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1.2rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		font-family: 'Manrope', sans-serif;
+		font-weight: 800;
+		font-size: 1.2rem;
+		color: var(--primary);
+		letter-spacing: -0.5px;
+	}
+
+	.nav-links a {
+		text-decoration: none;
+		color: var(--text-light);
+		margin-left: 2rem;
+		font-weight: 500;
+		font-size: 0.95rem;
+		transition: color 0.2s ease;
+	}
+
+	.nav-links a:hover {
+		color: var(--primary);
+	}
+
+	/* --- Premium Enterprise Footer --- */
+	.footer {
+		background-color: var(--white);
+		border-top: 1px solid var(--border);
+		padding-top: 3rem;
+		margin-top: 3rem;
+		color: var(--text-light);
+		font-family: 'Inter', sans-serif;
+	}
+
+	.footer-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 1.5fr;
+		gap: 3rem;
+		margin-bottom: 2rem;
+	}
+
+	.footer-logo {
+		font-family: 'Manrope', sans-serif;
+		font-weight: 800;
+		font-size: 1.8rem;
+		color: var(--primary);
+		letter-spacing: -0.5px;
+		margin-bottom: 1rem;
+	}
+
+	.company-desc {
+		font-size: 0.95rem;
+		line-height: 1.7;
+		margin-bottom: 2rem;
+		max-width: 90%;
+	}
+
+	.app-title {
+		font-family: 'Manrope', sans-serif;
+		font-weight: 700;
+		color: var(--text-main);
+		margin-bottom: 1rem;
+		font-size: 1rem;
+	}
+
+	.app-badges {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.store-badge {
+		width: 110px;
+		height: 110px;
+		object-fit: contain;
+		border-radius: 8px;
+		cursor: pointer;
+		background-color: #ffffff;
+		border: 1px solid var(--border);
+		padding: 4px;
+	}
+
+	.footer-col h4 {
+		font-family: 'Manrope', sans-serif;
+		font-size: 1.1rem;
+		color: var(--text-main);
+		margin-bottom: 1.5rem;
+	}
+
+	.footer-col ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.footer-col ul li {
+		margin-bottom: 0.8rem;
+	}
+
+	.footer-col a {
+		text-decoration: none;
+		color: var(--text-light);
+		font-size: 0.95rem;
+		transition: color 0.2s ease;
+	}
+
+	.footer-col a:hover {
+		color: var(--primary);
+	}
+
+	.contact-col ul li {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.8rem;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.contact-icon {
+		font-size: 1.2rem;
+		line-height: 1;
+	}
+
+	.footer-bottom {
+		border-top: 1px solid var(--border);
+		text-align: center;
+		padding: 2rem;
+		font-size: 0.9rem;
+		background-color: #fcfcfc;
+	}
+
+	/* Responsive Footer */
+	@media (max-width: 960px) {
+		.footer-container {
+			grid-template-columns: 1fr 1fr;
+		}
+		.brand-col {
+			grid-column: 1 / -1;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.footer-container {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
 	}
 </style>
