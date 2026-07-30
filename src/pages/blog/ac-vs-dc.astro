@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
 ---
 
-<Layout title="AC vs. DC Fast Charging: A Simple Guide | SunArth Insights">
+<Layout title="AC vs. DC Fast Charging: A Simple Guide | SunArth Insights" description="Learn the practical difference between AC and DC EV charging, including speed, installation needs, costs, and the right use cases for Indian businesses." image="/ac_dc.webp" publishedAt="2026-07-18">
 	<!-- Article Hero -->
 	<header class="article-hero">
 		<div class="hero-container">
@@ -111,6 +112,7 @@ import Layout from '../../layouts/Layout.astro';
 			</section>
 		</article>
 	</main>
+	<RelatedArticles currentSlug="ac-vs-dc" />
 </Layout>
 
 <style>

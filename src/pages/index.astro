@@ -1,501 +1,557 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import InsightCard from "../components/InsightCard.astro";
 ---
 
 <Layout title="SunArth Insights | Powering India's EV Knowledge">
-	<!-- Hero Section with Subtle Grid Pattern -->
-	<section class="hero">
-		<div class="hero-content">
-			<span class="badge">SUNARTH INSIGHTS</span>
-			<h1>Powering India's EV Knowledge</h1>
-			<p>Expert guides, industry insights, installation tutorials, and charging infrastructure resources engineered for the future.</p>
+  <!-- Hero Section with Subtle Grid Pattern -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">SUNARTH INSIGHTS</span>
+      <h1>Powering India's EV Knowledge</h1>
+      <p>
+        Expert guides, industry insights, installation tutorials, and charging
+        infrastructure resources engineered for the future.
+      </p>
 
-			<div class="hero-buttons">
-				<a href="#articles" class="btn btn-primary">Explore Articles</a>
-				<a href="https://sunarth.com/hardware" class="btn btn-secondary">EV Solutions</a>
-			</div>
-		</div>
-	</section>
+      <div class="hero-buttons">
+        <a href="#articles" class="btn btn-primary">Explore Articles</a>
+        <a href="https://sunarth.com/hardware" class="btn btn-secondary"
+          >EV Solutions</a
+        >
+      </div>
+    </div>
+  </section>
 
-	<main class="container">
+  <main class="container">
+    <!-- Featured Article & Categories Layout -->
+    <div class="top-layout">
+      <!-- Featured Card -->
+      <a href="/blog/ev-charging-guide" class="featured-card">
+        <img
+          src="/img1.svg"
+          alt="Complete Guide to EV Charging"
+          class="featured-image"
+        />
+        <div class="featured-content">
+          <span class="category-tag">FEATURED</span>
+          <h2>The Complete Guide to EV Charging in India</h2>
+          <p class="read-time">8 min read</p>
+        </div>
+      </a>
 
-		<!-- Featured Article & Categories Layout -->
-		<div class="top-layout">
-			<!-- Featured Card -->
-			<a href="/blog/ev-charging-guide" class="featured-card">
-				<img src="/img1.svg" alt="Complete Guide to EV Charging" class="featured-image" />
-				<div class="featured-content">
-					<span class="category-tag">FEATURED</span>
-					<h2>The Complete Guide to EV Charging in India</h2>
-					<p class="read-time">8 min read</p>
-				</div>
-			</a>
+      <!-- Quick Categories -->
+      <div class="categories-grid">
+        <a href="#articles" class="category-card">⚡ Charging Guides</a>
+        <a href="#articles" class="category-card">🏢 Commercial EV</a>
+        <a href="#articles" class="category-card">🏠 Home Charging</a>
+        <a href="#articles" class="category-card">🚍 Fleet Solutions</a>
+        <a href="#articles" class="category-card">🔋 Battery Technology</a>
+        <a href="#articles" class="category-card">📈 Industry Insights</a>
+      </div>
+    </div>
 
-			<!-- Quick Categories -->
-			<div class="categories-grid">
-				<div class="category-card">⚡ Charging Guides</div>
-				<div class="category-card">🏢 Commercial EV</div>
-				<div class="category-card">🏠 Home Charging</div>
-				<div class="category-card">🚍 Fleet Solutions</div>
-				<div class="category-card">🔋 Battery Technology</div>
-				<div class="category-card">📈 Industry Insights</div>
-			</div>
-		</div>
+    <!-- Latest Articles Section (HORIZONTAL SCROLL) -->
+    <div id="articles">
+      <h3 class="section-title">Latest Articles</h3>
+      <div class="articles-grid">
+        <InsightCard
+          url="/blog/prawas"
+          image="/prawas.png"
+          altText="Sunarth at Prawaas 2026"
+          tag="Events & Exhibitions"
+          title="Sunarth's Journey at Prawaas 2026"
+          description="Discover our key takeaways and highlights from India's premier sustainable transport expo."
+        />
 
-		<!-- Latest Articles Section (Added missing heading) -->
-		<div id="articles">
-			<h3 class="section-title">Latest Articles</h3>
-			<div class="articles-grid">
-				<!-- Card 1 -->
-				<a href="/blog/commercial-hubs" class="article-card" style="text-decoration: none;">
-					<img src="/com_s.webp" alt="Commercial hubs" class="card-img" />
-					<div class="card-body">
-						<span class="tag">Installation</span>
-						<h4 style="color: var(--text-main);">Setting Up Commercial Hubs</h4>
-						<p>Best practices for deploying scalable EV infrastructure in retail spaces.</p>
-						<span class="read-more">Read →</span>
-					</div>
-				</a>
+        <InsightCard
+          url="/blog/commercial-hubs"
+          image="/com_s.webp"
+          altText="Commercial hubs"
+          tag="Installation"
+          title="Setting Up Commercial Hubs"
+          description="Best practices for deploying scalable EV infrastructure in retail spaces."
+        />
 
-				<!-- Card 2 -->
-				<a href="/blog/ac-vs-dc" class="article-card" style="text-decoration: none;">
-					<img src="/ac_dc.webp" alt="AC v/c DC" class="card-img" />
-					<div class="card-body">
-						<span class="tag">Technology</span>
-						<h4 style="color: var(--text-main);">AC vs. DC Fast Charging</h4>
-						<p>Understanding the hardware requirements for rapid charging solutions.</p>
-						<span class="read-more">Read →</span>
-					</div>
-				</a>
+        <InsightCard
+          url="/blog/ac-vs-dc"
+          image="/ac_dc.webp"
+          altText="AC v/c DC"
+          tag="Technology"
+          title="AC vs. DC Fast Charging"
+          description="Understanding the hardware requirements for rapid charging solutions."
+        />
 
-				<!-- Card 3 -->
-				<a href="/blog/grid-balancing" class="article-card" style="text-decoration: none;">
-					<img src="/ren.webp" alt="Sustainability" class="card-img" />
-					<div class="card-body">
-						<span class="tag">Sustainability</span>
-						<h4 style="color: var(--text-main);">Grid Balancing & Renewables</h4>
-						<p>How intelligent chargers prevent local grid overloading.</p>
-						<span class="read-more">Read →</span>
-					</div>
-				</a>
-			</div>
-		</div>
-<!-- Newsletter Section -->
-<section class="newsletter">
-    <div class="newsletter-content">
+        <InsightCard
+          url="/blog/prawas"
+          image="/ren.webp"
+          altText="Sustainability"
+          tag="Events & Exhibitions"
+          title="SunArth at Prawaas 2026"
+          description="Highlights from India’s premier sustainable transport expo."
+        />
+        <InsightCard
+          url="/blog/pmdrive"
+          image="/pm-e-drive.webp"
+          altText="PM E-DRIVE Scheme Overview"
+          tag="Industry Insights"
+          title="PM E-DRIVE Scheme Decoded"
+          description="A complete breakdown of the ₹10,900 crore PM E-DRIVE scheme and how manufacturers & buyers benefit."
+        />
+      </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="newsletter-content">
         <h3>Stay updated with the EV Industry</h3>
 
-        <!-- Form submission is completely locked to JavaScript now -->
-        <form id="subscribe-form" class="subscribe-form" onsubmit="window.submitToMailchimp(event); return false;">
-            <input type="email" name="EMAIL" id="email-input" placeholder="Enter your email address" required />
+        <form
+          id="subscribe-form"
+          class="subscribe-form"
+          onsubmit="window.submitToMailchimp(event); return false;"
+        >
+          <input
+            type="email"
+            name="EMAIL"
+            id="email-input"
+            placeholder="Enter your email address"
+            required
+          />
 
-            <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                <input type="text" name="b_c46f9a9477860d43680cfc46a_f8bf489cee" tabindex="-1" value="">
-            </div>
+          <div aria-hidden="true" style="position: absolute; left: -5000px;">
+            <input
+              type="text"
+              name="b_c46f9a9477860d43680cfc46a_f8bf489cee"
+              tabindex="-1"
+              value=""
+            />
+          </div>
 
-            <button type="submit" class="btn btn-primary" id="submit-btn">Subscribe</button>
+          <button type="submit" class="btn btn-primary" id="submit-btn"
+            >Subscribe</button
+          >
         </form>
 
-        <!-- Graceful Success Message -->
-        <div id="success-message" style="display: none; padding: 1.5rem; background: rgba(14, 122, 77, 0.1); border-radius: 8px; margin-top: 1rem;">
-            <h4 style="color: var(--primary); margin: 0; font-size: 1.2rem;">✨ Thank you for subscribing!</h4>
-            <p style="color: var(--text-main); margin: 0.5rem 0 0 0; font-size: 0.95rem;">You will now receive the latest EV updates from SunArth.</p>
+        <div
+          id="success-message"
+          style="display: none; padding: 1.5rem; background: rgba(14, 122, 77, 0.1); border-radius: 8px; margin-top: 1rem;"
+        >
+          <h4 style="color: var(--primary); margin: 0; font-size: 1.2rem;">
+            ✨ Thank you for subscribing!
+          </h4>
+          <p
+            style="color: var(--text-main); margin: 0.5rem 0 0 0; font-size: 0.95rem;"
+          >
+            You will now receive the latest EV updates from SunArth.
+          </p>
         </div>
 
-        <!-- Graceful Error/Redundancy Message -->
-        <div id="error-message" style="display: none; color: #d32f2f; margin-top: 1rem; font-size: 0.95rem; font-weight: 600;">
+        <div
+          id="error-message"
+          style="display: none; color: #d32f2f; margin-top: 1rem; font-size: 0.95rem; font-weight: 600;"
+        >
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
+    <!-- Mailchimp Script -->
+    <script is:inline>
+      window.submitToMailchimp = function (event) {
+        if (event) event.preventDefault();
 
-<!-- Advanced script to communicate with Mailchimp in background -->
-<script is:inline>
-    window.submitToMailchimp = function(event) {
-        if(event) event.preventDefault();
+        var email = document.getElementById("email-input").value;
+        var submitBtn = document.getElementById("submit-btn");
+        var errorBox = document.getElementById("error-message");
+        var successBox = document.getElementById("success-message");
 
-        var email = document.getElementById('email-input').value;
-        var submitBtn = document.getElementById('submit-btn');
-        var errorBox = document.getElementById('error-message');
-        var successBox = document.getElementById('success-message');
+        if (email !== "" && email.includes("@")) {
+          submitBtn.innerText = "Subscribing...";
+          submitBtn.disabled = true;
+          errorBox.style.display = "none";
+          successBox.style.display = "none";
 
-        if(email !== '' && email.includes('@')) {
-            submitBtn.innerText = "Subscribing...";
-            submitBtn.disabled = true;
-            errorBox.style.display = 'none';
-            successBox.style.display = 'none';
+          var url =
+            "https://sunarth.us12.list-manage.com/subscribe/post-json?u=c46f9a9477860d43680cfc46a&id=f8bf489cee&f_id=000ebfe0f0&EMAIL=" +
+            encodeURIComponent(email) +
+            "&c=mailchimpCallback";
 
-            var url = "https://sunarth.us12.list-manage.com/subscribe/post-json?u=c46f9a9477860d43680cfc46a&id=f8bf489cee&f_id=000ebfe0f0&EMAIL=" + encodeURIComponent(email) + "&c=mailchimpCallback";
-
-            var script = document.createElement('script');
-            script.src = url;
-            document.body.appendChild(script);
+          var script = document.createElement("script");
+          script.src = url;
+          document.body.appendChild(script);
         }
-    };
+      };
 
-    window.mailchimpCallback = function(data) {
-        var formBox = document.getElementById('subscribe-form');
-        var successBox = document.getElementById('success-message');
-        var errorBox = document.getElementById('error-message');
-        var submitBtn = document.getElementById('submit-btn');
+      window.mailchimpCallback = function (data) {
+        var formBox = document.getElementById("subscribe-form");
+        var successBox = document.getElementById("success-message");
+        var errorBox = document.getElementById("error-message");
+        var submitBtn = document.getElementById("submit-btn");
 
-        if (data.result === 'success') {
-            formBox.style.display = 'none';
-            errorBox.style.display = 'none';
-            successBox.style.display = 'block';
+        if (data.result === "success") {
+          formBox.style.display = "none";
+          errorBox.style.display = "none";
+          successBox.style.display = "block";
         } else {
-            // Agar result error aata hai (Duplicate ya invalid)
-            submitBtn.innerText = "Subscribe";
-            submitBtn.disabled = false;
-            errorBox.style.display = 'block';
+          submitBtn.innerText = "Subscribe";
+          submitBtn.disabled = false;
+          errorBox.style.display = "block";
 
-            var msgString = data.msg.toLowerCase();
+          var msgString = data.msg.toLowerCase();
 
-            if(msgString.includes('already subscribed') || msgString.includes('already')) {
-                errorBox.innerHTML = "✨ you are already subscribed!";
-            } else if (msgString.includes('too many')) {
-                errorBox.innerHTML = "Too many attempts. Please try again later.";
-            } else {
-                errorBox.innerHTML = "Something went wrong. Please check your email.";
-            }
+          if (
+            msgString.includes("already subscribed") ||
+            msgString.includes("already")
+          ) {
+            errorBox.innerHTML = "✨ You are already subscribed!";
+          } else if (msgString.includes("too many")) {
+            errorBox.innerHTML = "Too many attempts. Please try again later.";
+          } else {
+            errorBox.innerHTML =
+              "Something went wrong. Please check your email.";
+          }
         }
-    };
-</script>
-	</main>
+      };
+    </script>
+  </main>
 </Layout>
 
 <style>
-	/* --- Hero Section & Grid Background --- */
-	.hero {
-		padding: 8rem 2rem 6rem;
-		text-align: center;
-		position: relative;
-		background-image:
-			linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-			linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-		background-size: 40px 40px;
-		background-position: center top;
-	}
+  /* --- Hero Section & Grid Background --- */
+  .hero {
+    padding: 8rem 2rem 6rem;
+    text-align: center;
+    position: relative;
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center top;
+  }
 
-	.hero::after {
-		content: '';
-		position: absolute;
-		bottom: 0; left: 0; right: 0; top: 0;
-		background: linear-gradient(to bottom, transparent, var(--bg-color));
-		pointer-events: none;
-	}
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to bottom, transparent, var(--bg-color));
+    pointer-events: none;
+  }
 
-	.hero-content {
-		max-width: 800px;
-		margin: 0 auto;
-		position: relative;
-		z-index: 10;
-	}
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
 
-	.badge {
-		display: inline-block;
-		background: rgba(14, 122, 77, 0.1);
-		color: var(--primary);
-		padding: 0.4rem 1rem;
-		border-radius: 50px;
-		font-weight: 700;
-		font-size: 0.85rem;
-		letter-spacing: 1px;
-		margin-bottom: 1.5rem;
-	}
+  .badge {
+    display: inline-block;
+    background: rgba(14, 122, 77, 0.1);
+    color: var(--primary);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+  }
 
-	.hero h1 {
-		font-size: 4rem;
-		font-weight: 800;
-		letter-spacing: -1.5px;
-		margin-bottom: 1.5rem;
-	}
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 1.5rem;
+  }
 
-	.hero p {
-		font-size: 1.25rem;
-		color: var(--text-light);
-		margin-bottom: 2.5rem;
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+  .hero p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-	/* --- Buttons --- */
-	.hero-buttons {
-		display: flex;
-		justify-content: center;
-		gap: 1rem;
-	}
+  /* --- Buttons --- */
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-	.btn {
-		padding: 0.8rem 1.8rem;
-		border-radius: 8px;
-		font-weight: 600;
-		text-decoration: none;
-		transition: all 0.2s ease;
-		font-size: 1rem;
-		cursor: pointer;
-		display: inline-block;
-	}
+  .btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+  }
 
-	.btn-primary {
-		background-color: var(--primary);
-		color: var(--white);
-		box-shadow: 0 4px 14px rgba(14, 122, 77, 0.2);
-		border: none;
-	}
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 4px 14px rgba(14, 122, 77, 0.2);
+    border: none;
+  }
 
-	.btn-primary:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 6px 20px rgba(14, 122, 77, 0.3);
-	}
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(14, 122, 77, 0.3);
+  }
 
-	.btn-secondary {
-		background-color: var(--white);
-		color: var(--text-main);
-		border: 1px solid var(--border);
-	}
+  .btn-secondary {
+    background-color: var(--white);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+  }
 
-	.btn-secondary:hover {
-		border-color: var(--text-light);
-		background-color: #f3f4f6;
-	}
+  .btn-secondary:hover {
+    border-color: var(--text-light);
+    background-color: #f3f4f6;
+  }
 
-	/* --- Layout Container --- */
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 2rem;
-	}
+  /* --- Layout Container --- */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 
-	/* --- Featured & Categories Layout --- */
-	.top-layout {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		gap: 2rem;
-		margin-top: 2rem;
-		margin-bottom: 4rem;
-	}
+  /* --- Featured & Categories Layout --- */
+  .top-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
 
-	.featured-card {
-		background: var(--white);
-		border-radius: 16px;
-		border: 1px solid var(--border);
-		overflow: hidden;
-		text-decoration: none;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		display: flex;
-		flex-direction: column;
-	}
+  .featured-card {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    text-decoration: none;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
 
-	.featured-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-	}
+  .featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  }
 
-	.featured-image {
-		height: 350px;
-		width: 100%;
-		object-fit: cover;
-		display: block;
-		border-bottom: 1px solid var(--border);
-	}
+  .featured-image {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border);
+  }
 
-	.featured-content {
-		padding: 2.5rem;
-	}
+  .featured-content {
+    padding: 2.5rem;
+  }
 
-	.category-tag {
-		font-family: 'Manrope', sans-serif;
-		font-weight: 800;
-		font-size: 0.85rem;
-		color: var(--accent);
-		letter-spacing: 1px;
-	}
+  .category-tag {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+  }
 
-	.featured-content h2 {
-		font-size: 2.2rem;
-		margin: 1rem 0;
-		color: var(--text-main);
-	}
+  .featured-content h2 {
+    font-size: 2.2rem;
+    margin: 1rem 0;
+    color: var(--text-main);
+  }
 
-	.read-time {
-		color: var(--text-light);
-		font-size: 0.95rem;
-	}
+  .read-time {
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
 
-	/* Categories Grid */
-	.categories-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1rem;
-	}
+  /* Categories Grid */
+  .categories-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 
-	.category-card {
-		background: var(--white);
-		border: 1px solid var(--border);
-		padding: 1.2rem;
-		border-radius: 12px;
-		font-weight: 600;
-		color: var(--text-main);
-		cursor: pointer;
-		transition: all 0.2s ease;
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-	}
+  .category-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 1.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-	.category-card:hover {
-		border-color: var(--primary);
-		color: var(--primary);
-		transform: translateX(5px);
-		box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-	}
+  .category-card:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
 
-	/* --- Latest Articles Grid --- */
-	.section-title {
-		font-family: 'Manrope', sans-serif;
-		font-size: 2rem;
-		color: var(--text-main);
-		margin-bottom: 2rem;
-		border-bottom: 1px solid var(--border);
-		padding-bottom: 1rem;
-	}
+  .category-card:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+  }
 
-	.articles-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 2rem;
-		margin-bottom: 6rem;
-	}
+  /* --- Latest Articles Grid (Horizontal Scroll) --- */
+  .section-title {
+    font-family: "Manrope", sans-serif;
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+  }
 
-	.article-card {
-		background: var(--white);
-		border-radius: 12px;
-		border: 1px solid var(--border);
-		overflow: hidden;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		display: flex;
-		flex-direction: column;
-	}
+  /* --- Smooth & Visible Horizontal Scroll Track --- */
+  .articles-grid {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 
-	.article-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-	}
+    /* Custom Visible Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary, #087947) rgba(0, 0, 0, 0.05);
+  }
 
-	/* Fixed the image size for smaller cards */
-	.card-img {
-		height: 220px;
-		width: 100%;
-		object-fit: cover;
-		display: block;
-		border-bottom: 1px solid var(--border);
-	}
+  /* Chrome, Safari, and Edge Custom Scrollbar */
+  .articles-grid::-webkit-scrollbar {
+    height: 8px; /* Scrollbar ki motai */
+    display: block !important; /* Forcefully show */
+  }
 
-	.card-body {
-		padding: 1.5rem;
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-	}
+  .articles-grid::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+  .articles-grid::-webkit-scrollbar-thumb {
+    background-color: var(--primary, #087947);
+    border-radius: 4px;
+  }
+  .articles-grid::-webkit-scrollbar {
+    display: none;
+  }
+  /* --- Newsletter --- */
+  .newsletter {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 
-	.tag {
-		font-size: 0.8rem;
-		font-weight: 700;
-		color: var(--primary);
-		text-transform: uppercase;
-		letter-spacing: 0.5px;
-	}
+  .newsletter h3 {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+  }
 
-	.card-body h4 {
-		font-family: 'Manrope', sans-serif;
-		font-size: 1.3rem;
-		margin: 0.5rem 0 1rem;
-		line-height: 1.4;
-	}
+  .subscribe-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0.8rem;
+  }
 
-	.card-body p {
-		color: var(--text-light);
-		font-size: 0.95rem;
-		margin-bottom: 1.5rem;
-		flex-grow: 1;
-	}
+  .subscribe-form input {
+    flex: 1;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
 
-	.read-more {
-		font-weight: 600;
-		color: var(--text-main);
-		font-size: 0.95rem;
-		transition: color 0.2s ease;
-	}
+  .subscribe-form input:focus {
+    border-color: var(--primary);
+  }
 
-	.article-card:hover .read-more {
-		color: var(--primary);
-	}
+  /* --- Ultra-Responsive Design --- */
+  @media (max-width: 1024px) {
+    .top-layout {
+      grid-template-columns: 1fr;
+    }
+    .categories-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .featured-image {
+      height: 300px;
+    }
+  }
 
-	/* --- Newsletter --- */
-	.newsletter {
-		background: var(--white);
-		border: 1px solid var(--border);
-		border-radius: 16px;
-		padding: 4rem 2rem;
-		text-align: center;
-		margin-bottom: 4rem;
-	}
+  @media (max-width: 768px) {
+    .hero {
+      padding: 6rem 1.5rem 4rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+  }
 
-	.newsletter h3 {
-		font-family: 'Manrope', sans-serif;
-		font-size: 1.8rem;
-		margin-bottom: 2rem;
-		color: var(--text-main);
-	}
-
-	.subscribe-form {
-		display: flex;
-		max-width: 500px;
-		margin: 0 auto;
-		gap: 0.8rem;
-	}
-
-	.subscribe-form input {
-		flex: 1;
-		padding: 1rem 1.2rem;
-		border: 1px solid var(--border);
-		border-radius: 8px;
-		font-family: inherit;
-		font-size: 1rem;
-		outline: none;
-		transition: border-color 0.2s;
-	}
-
-	.subscribe-form input:focus {
-		border-color: var(--primary);
-	}
-
-	/* --- Ultra-Responsive Design --- */
-	@media (max-width: 1024px) {
-		.top-layout { grid-template-columns: 1fr; }
-		.categories-grid { grid-template-columns: repeat(2, 1fr); }
-		.articles-grid { grid-template-columns: repeat(2, 1fr); }
-		.featured-image { height: 300px; }
-	}
-
-	@media (max-width: 768px) {
-		.hero { padding: 6rem 1.5rem 4rem; }
-		.hero h1 { font-size: 3rem; }
-		.hero p { font-size: 1.1rem; }
-	}
-
-	@media (max-width: 600px) {
-		.hero h1 { font-size: 2.2rem; margin-bottom: 1rem; }
-		.hero-buttons { flex-direction: column; width: 100%; }
-		.btn { width: 100%; text-align: center; }
-		.categories-grid { grid-template-columns: 1fr; }
-		.articles-grid { grid-template-columns: 1fr; }
-		.subscribe-form { flex-direction: column; gap: 1rem; }
-		.subscribe-form .btn { width: 100%; }
-		.featured-image { height: 200px; }
-		.featured-content { padding: 1.5rem; }
-		.featured-content h2 { font-size: 1.8rem; }
-	}
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .hero-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+    .subscribe-form {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .subscribe-form .btn {
+      width: 100%;
+    }
+    .featured-image {
+      height: 200px;
+    }
+    .featured-content {
+      padding: 1.5rem;
+    }
+    .featured-content h2 {
+      font-size: 1.8rem;
+    }
+  }
 </style>

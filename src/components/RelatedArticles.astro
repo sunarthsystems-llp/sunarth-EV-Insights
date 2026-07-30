@@ -1,0 +1,137 @@
+---
+import InsightCard from "./InsightCard.astro";
+
+export interface Props {
+  currentSlug?: string;
+}
+
+const { currentSlug = "" } = Astro.props;
+
+const allArticles = [
+  {
+    slug: "prawas",
+    url: "/blog/prawas",
+    image: "/prawas.png",
+    altText: "Sunarth at Prawaas 2026",
+    tag: "Events & Exhibitions",
+    title: "Sunarth's Journey at Prawaas 2026",
+    description:
+      "Discover our key takeaways and highlights from India's premier sustainable transport expo.",
+  },
+  {
+    slug: "commercial-hubs",
+    url: "/blog/commercial-hubs",
+    image: "/com_s.webp",
+    altText: "Commercial hubs",
+    tag: "Installation",
+    title: "Setting Up Commercial Hubs",
+    description:
+      "Best practices for deploying scalable EV infrastructure in retail spaces.",
+  },
+  {
+    slug: "ac-vs-dc",
+    url: "/blog/ac-vs-dc",
+    image: "/ac_dc.webp",
+    altText: "AC vs DC",
+    tag: "Technology",
+    title: "AC vs. DC Fast Charging",
+    description:
+      "Understanding the hardware requirements for rapid charging solutions.",
+  },
+  {
+    slug: "ev-charging-guide",
+    url: "/blog/ev-charging-guide",
+    image: "/img1.webp",
+    altText: "Complete Guide to EV Charging",
+    tag: "EV Charging Guide",
+    title: "The Complete Guide to EV Charging in India",
+    description:
+      "An expert introduction to EV charging in India: charger types, connectors, and speed.",
+  },
+  {
+    slug: "pmdrive",
+    url: "/blog/pmdrive",
+    image: "/pm-e-drive.webp",
+    altText: "PM E-DRIVE Scheme Overview",
+    tag: "Industry Insights",
+    title: "PM E-DRIVE Scheme Decoded",
+    description:
+      "A complete breakdown of the ₹10,900 crore PM E-DRIVE scheme and how manufacturers & buyers benefit.",
+  },
+];
+
+// Automatically excludes the current article from the scroll list
+const articles = allArticles.filter((art) => art.slug !== currentSlug);
+---
+
+<section class="related-articles-section">
+  <div class="container">
+    <h3 class="section-title">Related Insights</h3>
+    <div class="articles-grid">
+      {
+        articles.map((article) => (
+          <InsightCard
+            url={article.url}
+            image={article.image}
+            altText={article.altText}
+            tag={article.tag}
+            title={article.title}
+            description={article.description}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .related-articles-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-family: "Manrope", sans-serif;
+    font-size: 2rem;
+    color: var(--text-main, #10231c);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border, #e2e8f0);
+    padding-bottom: 1rem;
+  }
+
+  /* Horizontal Scroll Track */
+  /* --- Smooth & Visible Horizontal Scroll Track --- */
+  .articles-grid {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    /* Custom Visible Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary, #087947) rgba(0, 0, 0, 0.05);
+  }
+
+  /* Chrome, Safari, and Edge Custom Scrollbar */
+  .articles-grid::-webkit-scrollbar {
+    height: 8px; /* Scrollbar ki motai */
+    display: block !important; /* Forcefully show */
+  }
+
+  .articles-grid::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+
+  .articles-grid::-webkit-scrollbar-thumb {
+    background-color: var(--primary, #087947);
+    border-radius: 4px;
+  }
+  .articles-grid::-webkit-scrollbar {
+    display: none;
+  }
+</style>

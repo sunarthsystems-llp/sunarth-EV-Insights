@@ -1,0 +1,778 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import RelatedArticles from "../../components/RelatedArticles.astro";
+
+// SEO & Meta variables
+const title =
+  "PM E-DRIVE Scheme Decoded: Benefits for EV Charger Manufacturers and Buyers | SunArth Insights";
+const description =
+  "A complete breakdown of the ₹10,900 crore PM E-DRIVE scheme. Learn how EV charger manufacturers, installers, and buyers can leverage government subsidies.";
+const canonicalURL = "https://sunarth.com/blog/pmdrive";
+const ogImage = "/pm-e-drive.webp"; // Fallback image for social sharing
+
+const post = {
+  title:
+    "PM E-DRIVE Scheme Decoded: How EV Charger Manufacturers and Buyers Can Benefit",
+  category: "Industry Insights",
+  date: "30 July 2026",
+  readTime: "8 min read",
+  author: "Team SunArth",
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  image={ogImage}
+  publishedAt="2026-07-30"
+>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <main>
+    <!-- 1. Fullscreen Hero with Image Background -->
+    <section class="hero" aria-label="Hero Section">
+      <img
+        src="/pm-e-drive.webp"
+        alt="PM E-DRIVE Scheme Overview"
+        class="hero-bg-img"
+      />
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content reveal">
+        <span class="hero-category">{post.category}</span>
+        <h1 class="hero-title">{post.title}</h1>
+        <div class="hero-meta">
+          <span>{post.author}</span>
+          <span class="dot">•</span>
+          <span>{post.date}</span>
+          <span class="dot">•</span>
+          <span>{post.readTime}</span>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <main class="article-layout">
+      <!-- Sticky Table of Contents -->
+      <aside class="sidebar">
+        <div class="sticky-toc">
+          <h4>Table of Contents</h4>
+          <ul>
+            <li><a href="#what-is-it">What Is the Scheme?</a></li>
+            <li><a href="#budget-breakdown">Budget Breakdown</a></li>
+            <li><a href="#infrastructure">Charging Infrastructure</a></li>
+            <li><a href="#manufacturers">Benefits for Manufacturers</a></li>
+            <li><a href="#buyers">Benefits for Buyers</a></li>
+            <li><a href="#timeline">Recent Timeline Updates</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Article Content -->
+      <article class="content">
+        <section id="what-is-it">
+          <p class="lead">
+            If you have been following India's EV charging space in 2026, you
+            have almost certainly heard the term PM E-DRIVE scheme thrown around
+            in tenders, news about subsidy deadlines, and policy discussions
+            about the country's charging network.
+          </p>
+          <p>
+            However, most explainers stop at simply stating it is a ₹10,900
+            crore government scheme. That is not particularly useful if you are
+            actually trying to decide whether to buy a subsidised EV, install a
+            charger at your business, or supply charging equipment to a
+            government backed project.
+          </p>
+          <p>
+            This guide breaks down what the PM E-DRIVE scheme actually funds,
+            how the charging infrastructure component works, and most
+            importantly, what it means in practical terms if you are a
+            manufacturer, an installer, or a buyer weighing an EV charging
+            investment right now.
+          </p>
+
+          <h2>What Is the PM E-DRIVE Scheme?</h2>
+          <p>
+            PM E-DRIVE stands for PM Electric Drive Revolution in Innovative
+            Vehicle Enhancement. It is a flagship scheme run by the Ministry of
+            Heavy Industries (MHI), notified in September 2024 and rolled out
+            from October 1, 2024, with a total financial outlay of ₹10,900
+            crore.
+          </p>
+          <p>
+            It replaced the earlier FAME II scheme and was designed to do three
+            things at once:
+          </p>
+          <ul>
+            <li>
+              Make electric vehicles cheaper to buy through direct demand
+              incentives.
+            </li>
+            <li>Build out public EV charging infrastructure at scale.</li>
+            <li>
+              Strengthen India's domestic EV manufacturing base, in line with
+              the government's Make in India and Aatmanirbhar Bharat push.
+            </li>
+          </ul>
+          <p>
+            The scheme was originally set to run until March 2026. In August
+            2025, the government extended its overall tenure to March 31, 2028,
+            within the same outlay. As we will explore, different vehicle
+            categories now have different cutoff dates.
+          </p>
+        </section>
+
+        <section id="budget-breakdown">
+          <h2>Where the ₹10,900 Crore Goes</h2>
+          <p>
+            The scheme is not a single lump sum subsidy. It is split across
+            several heads, each targeting a different part of the EV ecosystem:
+          </p>
+          <ul>
+            <li>
+              <strong>Demand incentives (electric vouchers):</strong> Roughly ₹3,679
+              crore set aside to subsidise electric two wheelers, electric three wheelers,
+              electric ambulances, electric trucks, and other emerging EV categories
+              at the point of purchase.
+            </li>
+            <li><strong>Electric Ambulance deployment:</strong> ₹500 crore.</li>
+            <li>
+              <strong>Electric Bus procurement:</strong> ₹4,391 crore earmarked for
+              14,028 electric buses, procured through state transport undertakings
+              under a Gross Cost Contract model.
+            </li>
+            <li>
+              <strong>Electric Truck incentives:</strong> ₹500 crore, available only
+              against a valid vehicle scrapping certificate from a MoRTH authorised
+              facility, covering trucks in the 3.5 to 12 tonne and 12 to 55 tonne
+              weight classes.
+            </li>
+            <li>
+              <strong>Charging infrastructure:</strong> ₹2,000 crore, aimed at building
+              out public charging stations nationwide.
+            </li>
+            <li>
+              <strong>Testing agency upgradation:</strong> ₹780 crore to modernise
+              vehicle and component testing infrastructure under MHI.
+            </li>
+          </ul>
+          <p>
+            For anyone in the charger manufacturing or EV infrastructure
+            business, that fourth line item, the ₹2,000 crore charging
+            infrastructure component, is the one worth understanding in detail.
+          </p>
+        </section>
+
+        <section id="infrastructure">
+          <h2>The Charging Infrastructure Component</h2>
+          <p>
+            The scheme's charging infrastructure target is 72,300 public
+            charging stations, broken down as:
+          </p>
+          <ul>
+            <li>22,100 fast chargers for electric four wheelers</li>
+            <li>1,800 fast chargers for electric buses</li>
+            <li>48,400 chargers for electric two and three wheelers</li>
+          </ul>
+          <p>
+            These are not meant to be scattered randomly. Deployment is
+            prioritised in cities with high EV penetration, state capitals,
+            smart cities, metro linked satellite towns, and along high density
+            highway corridors. These are the routes and locations where range
+            anxiety is currently the biggest barrier to EV adoption.
+          </p>
+          <p>
+            What makes this component particularly relevant for manufacturers is
+            how the subsidy is structured. Under the operational guidelines
+            released for the charging infrastructure rollout:
+          </p>
+          <ul>
+            <li>
+              Chargers installed at high footfall public sites like railway
+              stations, airports, bus terminals, metro stations, municipal
+              parking lots, retail outlets of PSU oil companies, and NHAI or
+              state run toll plazas qualify for 80% subsidy on upstream
+              infrastructure costs and 70% on charging equipment costs.
+            </li>
+            <li>
+              Shopping malls, markets, and roadside facilities along highways
+              and expressways also qualify for an 80% subsidy on upstream
+              infrastructure.
+            </li>
+            <li>
+              Battery swapping stations are separately eligible for 80% support
+              on upstream costs.
+            </li>
+            <li>
+              Subsidy is released in two tranches, tied to compliance and
+              performance milestones, rather than being paid upfront in full.
+            </li>
+            <li>
+              Bharat Heavy Electricals Limited (BHEL) has been designated as the
+              Project Implementation Agency (PIA) overseeing the rollout, with
+              nodal agencies responsible for aggregating demand and identifying
+              priority sites through a dedicated portal.
+            </li>
+          </ul>
+          <blockquote class="info-card">
+            <strong>The Bottom Line:</strong> This is a government backed demand pipeline
+            for tens of thousands of charging units, with a defined implementation
+            agency and a published subsidy structure, not just a policy announcement.
+          </blockquote>
+        </section>
+
+        <section id="manufacturers">
+          <h2>How Charger Manufacturers Can Benefit</h2>
+
+          <h3>1. It creates a large, defined addressable market</h3>
+          <p>
+            A 72,300 unit target across four wheeler, bus, and two or three
+            wheeler charging categories is a substantial procurement pipeline.
+            Even manufacturers who do not win a national tender directly stand
+            to benefit from the broader base of installers, EPC contractors, and
+            site owners who need compliant hardware to claim the subsidy.
+          </p>
+
+          <h3>2. Compliance is the actual gatekeeper</h3>
+          <p>
+            None of this demand is available to non compliant hardware. Chargers
+            need to meet BIS certification under IS 17017, support OCPP for
+            network communication, and align with Bharat AC 001 and DC 001
+            standards where applicable. If your product line is not already
+            documented against these standards, that is the first thing to fix
+            before chasing this opportunity.
+          </p>
+
+          <h3>3. Domestic manufacturing has a structural advantage</h3>
+          <p>
+            The scheme's manufacturing components run through a Phased
+            Manufacturing Programme designed to increase local value addition,
+            consistent with the Aatmanirbhar Bharat approach followed across
+            MHI's EV schemes. This tends to favour manufacturers with genuine
+            domestic production over pure importers or assemblers. This is a
+            point worth highlighting in your own tender documentation and
+            marketing.
+          </p>
+
+          <h3>4. There is a second, complementary incentive layer</h3>
+          <p>
+            Manufacturers scaling up production can also look at the PLI Scheme
+            for Automobile and Auto Components, which offers performance linked
+            incentives on incremental sales. Startups building charging
+            technology can access DPIIT recognition and collateral free
+            institutional financing under Startup India. These schemes are not
+            mutually exclusive with PM E-DRIVE. Many manufacturers are
+            structuring their growth plans around both.
+          </p>
+
+          <h3>5. Know who to watch</h3>
+          <p>
+            With BHEL as the designated implementation agency and nodal bodies
+            aggregating site demand, tender activity for this rollout will not
+            all come through one portal or one announcement. Manufacturers
+            serious about this opportunity should be tracking BHEL's procurement
+            notices, state nodal agency tenders, and the broader CESL/EESL
+            demand aggregation tenders that have historically run parallel EV
+            infrastructure procurement in India.
+          </p>
+        </section>
+
+        <section id="buyers">
+          <h2>How Buyers Can Benefit</h2>
+          <p>The benefit here depends heavily on who the buyer is:</p>
+          <ul>
+            <li>
+              <strong>Individual electric two wheeler buyers</strong> get a direct
+              upfront price reduction. Currently this is up to ₹5,000 per vehicle
+              or ₹2,500 per kWh, typically adjusted at the dealership rather than
+              claimed separately.
+            </li>
+            <li>
+              <strong>Electric three wheeler buyers</strong> (including rickshaws
+              and carts) have subsidy access running considerably longer, through
+              March 2028.
+            </li>
+            <li>
+              <strong>Fleet operators, logistics companies, and STUs</strong> buying
+              electric buses or electric trucks can access dedicated procurement routes
+              and incentives tied to scrapping old vehicles.
+            </li>
+            <li>
+              <strong
+                >Commercial property owners, mall operators, highway facility
+                owners, and CPOs</strong
+              > looking to install public charging stations can access the 70 to 80%
+              subsidy structure described above. This creates a meaningfully different
+              economics case than self funding a charger network.
+            </li>
+          </ul>
+          <p>
+            Everyone else benefits indirectly. As public charging density
+            improves along the routes and locations targeted by this scheme, the
+            single biggest objection to EV ownership ("Where do I charge it?")
+            gets progressively weaker.
+          </p>
+          <blockquote class="info-card">
+            <strong>Important Timing Note:</strong> The electric two wheeler subsidy
+            window is currently set to close on July 31, 2026. Industry demand has
+            reportedly outpaced supply through 2026, and the government is evaluating
+            a further extension given how quickly the allocated budget is being utilised.
+            However, buyers and dealers should check the scheme's official status
+            before assuming the subsidy will still apply on a given purchase date.
+          </blockquote>
+        </section>
+
+        <section id="timeline">
+          <h2>
+            Recent Update: A Longer Runway, But Segment Specific Deadlines
+          </h2>
+          <p>
+            In August 2025, the government extended PM E-DRIVE's overall
+            duration from two years to four. The timeline shifted from March
+            2026 out to March 31, 2028, without increasing the total outlay. But
+            this extension is not uniform across vehicle categories:
+          </p>
+          <ul>
+            <li>
+              <strong>Electric two wheelers:</strong> Subsidy currently ends July
+              31, 2026.
+            </li>
+            <li>
+              <strong>Electric three wheelers (rickshaws and carts):</strong> Extended
+              to March 31, 2028.
+            </li>
+            <li>
+              <strong>Electric three wheelers (L5 category):</strong> Already closed
+              as of December 26, 2025, with no further change.
+            </li>
+            <li>
+              <strong
+                >Electric trucks, electric buses, and testing agency
+                upgradation:</strong
+              > Extended to March 31, 2028.
+            </li>
+          </ul>
+          <p>
+            For manufacturers and dealers, this staggered timeline matters for
+            sales planning. For buyers, it means the eligibility question
+            genuinely depends on which vehicle category you are looking at.
+          </p>
+        </section>
+
+        <section id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <details class="faq-item">
+              <summary
+                >What is the total outlay of the PM E-DRIVE scheme?</summary
+              >
+              <p>
+                ₹10,900 crore, in effect from October 1, 2024, and now extended
+                through March 31, 2028 within the same budget.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Is PM E-DRIVE a replacement for FAME II?</summary>
+              <p>
+                Yes. It succeeded FAME II as the government's primary EV demand
+                incentive and infrastructure scheme.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary
+                >How much is allocated specifically for EV charging
+                infrastructure?</summary
+              >
+              <p>
+                ₹2,000 crore, targeting 72,300 public charging stations across
+                four wheeler, bus, and two or three wheeler categories.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary
+                >Who implements the charging infrastructure rollout?</summary
+              >
+              <p>
+                Bharat Heavy Electricals Limited (BHEL) has been designated as
+                the Project Implementation Agency, working with nodal agencies
+                that aggregate demand and identify priority installation sites.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary
+                >Can a charger manufacturer participate in PM E-DRIVE linked
+                tenders?</summary
+              >
+              <p>
+                Yes, subject to meeting the required technical standards
+                including BIS/IS 17017 certification, OCPP compliance, and
+                Bharat AC 001/DC 001 standards where applicable. Tenders are
+                typically routed through BHEL, state nodal agencies, or demand
+                aggregation bodies like CESL/EESL.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary
+                >Does the subsidy cover the full cost of installing a public
+                charger?</summary
+              >
+              <p>
+                No. It covers 70 to 80% of upstream infrastructure and equipment
+                costs at eligible sites, disbursed in two tranches tied to
+                compliance milestones. The remainder is funded by the installer
+                or site owner.
+              </p>
+            </details>
+          </div>
+
+          <!-- SunArth CTA Box -->
+          <div class="cta-box">
+            <p>
+              Ensure your EV charging projects meet all government compliance
+              standards.
+            </p>
+            <a
+              href="https://sunarth.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="redirect-link"
+            >
+              Explore SunArth's Hardware Solutions &rarr;
+            </a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Horizontal Scrolling Related Articles Footer -->
+    <RelatedArticles currentSlug="pmdrive" />
+  </main>
+</Layout>
+
+<style>
+  /* --- Article Hero --- */
+  .article-hero {
+    max-width: 1000px;
+    margin: 4rem auto 2rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  .category-badge {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 25vh;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .hero-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    color: var(--text-hero, #f5fff8);
+  }
+
+  .hero-category {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-meta {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .dot {
+    font-size: 0.5rem;
+    opacity: 0.5;
+  }
+
+  /* --- 2-Column Article Layout --- */
+  .article-layout {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 4rem;
+  }
+  .sidebar {
+    position: relative;
+  }
+  .sticky-toc {
+    position: sticky;
+    top: 100px;
+    background: var(--white, #ffffff);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border, #e2e8f0);
+  }
+  .sticky-toc h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border, #e2e8f0);
+  }
+  .sticky-toc ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sticky-toc li {
+    margin-bottom: 0.8rem;
+  }
+  .sticky-toc a {
+    text-decoration: none;
+    color: var(--text-light, #61716a);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  .sticky-toc a:hover {
+    color: var(--primary, #087947);
+    font-weight: 500;
+  }
+
+  /* --- Main Content Typography --- */
+  .content {
+    max-width: 750px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .content section {
+    margin-bottom: 4rem;
+  }
+  .lead {
+    font-size: 1.3rem;
+    color: var(--text-light, #61716a);
+    margin-bottom: 2rem;
+  }
+  .content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
+    color: var(--text-primary, #10231c);
+  }
+  .content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    color: var(--text-primary, #10231c);
+  }
+  .content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary, #61716a);
+  }
+  .content ul,
+  .content ol {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    color: var(--text-secondary, #61716a);
+  }
+  .content li {
+    margin-bottom: 0.8rem;
+  }
+
+  /* --- Premium Info Card --- */
+  .info-card {
+    background: rgba(14, 122, 77, 0.05);
+    border-left: 4px solid var(--primary, #087947);
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2.5rem 0;
+    color: var(--text-main, #10231c);
+    font-weight: 500;
+  }
+
+  /* --- Zero-JS Accordion (FAQs) --- */
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .faq-item {
+    background: var(--white, #ffffff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    transition: box-shadow 0.2s ease;
+  }
+  .faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+  .faq-item summary {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 20px;
+    color: var(--text-primary, #10231c);
+  }
+  .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--primary, #087947);
+    transition: transform 0.3s ease;
+  }
+  .faq-item[open] summary::after {
+    content: "−";
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .faq-item p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: var(--text-light, #61716a);
+    font-size: 1rem;
+  }
+
+  /* --- ROI CTA Box --- */
+  .cta-box {
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 3.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  }
+  .cta-box p {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--text-main, #10231c);
+    font-size: 1.15rem;
+  }
+  .redirect-link {
+    display: inline-block;
+    color: var(--primary, #087947);
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .redirect-link:hover {
+    border-bottom-color: var(--primary, #087947);
+    transform: translateX(5px);
+  }
+
+  @media (max-width: 1024px) {
+    .article-layout {
+      grid-template-columns: 1fr;
+    }
+    .sidebar {
+      display: none;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Scroll Progress Bar
+  window.addEventListener("scroll", () => {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const bar = document.getElementById("progressBar");
+    if (bar) bar.style.width = scrolled + "%";
+  });
+
+  // Intersection Observer for fade-up animations
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px 0px -100px 0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, observerOptions);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = document.querySelectorAll(".reveal");
+    revealElements.forEach((el) => observer.observe(el));
+  });
+</script>

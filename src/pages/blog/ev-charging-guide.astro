@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
 ---
 
-<Layout title="The Complete Guide to EV Charging in India | SunArth Insights">
+<Layout title="The Complete Guide to EV Charging in India | SunArth Insights" description="An expert introduction to EV charging in India: charger types, connectors, charging speed, installation, and infrastructure planning." image="/img1.svg" publishedAt="2026-07-18">
 	<!-- Article Hero -->
 	<header class="article-hero">
 		<div class="hero-container">
@@ -113,6 +114,7 @@ import Layout from '../../layouts/Layout.astro';
 			</section>
 		</article>
 	</main>
+	<RelatedArticles currentSlug="ev-charging-guide" />
 </Layout>
 
 <style>

@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
 ---
 
-<Layout title="Setting Up Commercial EV Hubs | SunArth Insights">
+<Layout title="Setting Up Commercial EV Hubs | SunArth Insights" description="A practical guide to planning scalable, reliable EV charging hubs for retail spaces, fleets, and commercial properties in India." image="/com_s.webp" publishedAt="2026-07-18">
 	<header class="article-hero">
 		<div class="hero-container">
 			<span class="category-badge">Installation</span>
@@ -106,6 +107,7 @@ import Layout from '../../layouts/Layout.astro';
 			</section>
 		</article>
 	</main>
+	<RelatedArticles currentSlug="commercial-hubs" />
 </Layout>
 
 <style>
