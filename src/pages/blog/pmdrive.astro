@@ -11,8 +11,7 @@ const canonicalURL = "https://sunarth.com/blog/pmdrive";
 const ogImage = "/pm-e-drive.webp"; // Fallback image for social sharing
 
 const post = {
-  title:
-    "PM E-DRIVE Scheme Decoded: How EV Charger Manufacturers and Buyers Can Benefit",
+  title: "",
   category: "Industry Insights",
   date: "30 July 2026",
   readTime: "8 min read",
@@ -497,18 +496,14 @@ const post = {
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     z-index: 1;
   }
 
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
+
     z-index: 2;
   }
 
@@ -540,6 +535,7 @@ const post = {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: white;
   }
 
   .hero-meta {
