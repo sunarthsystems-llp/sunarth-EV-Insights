@@ -55,9 +55,10 @@ const { title, url, image, altText, tag, description } = Astro.props;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
   }
-
+  .flex-grow {
+    -grow: 1;
+  }
   .tag {
     font-size: 0.8rem;
     font-weight: 700;
@@ -78,7 +79,7 @@ const { title, url, image, altText, tag, description } = Astro.props;
     color: var(--text-light, #61716a);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    flex-grow: 1;
+    grow: 1;
   }
 
   .read-more {
